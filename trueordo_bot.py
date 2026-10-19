@@ -1,7 +1,12 @@
 import aiogram 
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import message
-from aiogram.filters import Command 
+from aiogram.types import (
+    CallbackQuery,  # Добавили для обработки нажатий
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message,
+)
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 bot = Bot(token="YOUR_BOT_TOKEN")
