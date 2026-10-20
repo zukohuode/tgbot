@@ -1,3 +1,5 @@
+from imaplib import Commands
+
 import aiogram 
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import message
@@ -24,7 +26,7 @@ keyboard = InlineKeyboardMarkup(
     ]
 )
 
-@dp.message(Command("start"))
+@dp.message(Commands("start"))
 async def send_welcome(message: types.Message):
     await message.answer("Hello, welcome to my bot!", reply_markup=keyboard)
 
