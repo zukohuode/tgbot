@@ -28,3 +28,7 @@ keyboard = InlineKeyboardMarkup(
 async def send_welcome(message: types.Message):
     await message.answer("Hello, welcome to my bot!", reply_markup=keyboard)
 
+@dp.callback_query(F.data == "truth")
+async def command_truth(callback_query: CallbackQuery):
+    await callback_query.answer()
+    await callback_query.message.answer("Ты выбрал правду!")
